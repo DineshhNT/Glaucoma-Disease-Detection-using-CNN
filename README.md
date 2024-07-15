@@ -23,6 +23,9 @@ This project employs a Convolutional Neural Network (CNN) to assist in the detec
 - scikit-learn
 - os
 
+## Dataset and Methodology
+The dataset for this project, sourced from Kaggle, comprises 100 eye images, with 50 images of glaucoma and 50 healthy images, in various formats and sizes. The methodology involves several key steps: collecting and organizing images into separate folders for glaucoma and healthy eyes; preprocessing by normalizing pixel values to a range of 0 to 1 and applying data augmentation techniques such as shearing, zooming, and horizontal flipping; resizing all images to 128x128 pixels and splitting 20% of the data for validation. The model architecture features a CNN with layers including an input layer with 32 filters, a 3x3 kernel size, and ReLU activation; multiple convolutional layers with increasing filters and ReLU activation; MaxPooling layers; a Flatten layer; a Dense layer with 128 units and ReLU activation; and an output layer with 1 unit and sigmoid activation for binary classification. Training uses the Adam optimizer, binary cross-entropy loss function, and accuracy metrics over 10 epochs. Validation uses 20% of the dataset, and the remaining test images evaluate model performance. Performance metrics such as loss and accuracy are monitored, and the trained model is saved for future use.
+
 ## Installation
 Install the required libraries using pip:
 ```bash
